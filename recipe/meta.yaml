@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 {% set sha256 = "ab3389859be35be6113bc9ce57032fb5a287f699ca2c71ffa470cff6dfd1b542" %}
 
 package:
@@ -11,7 +11,7 @@ source:
   # url: https://github.com/conda/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   # sha256: {{ sha256 }}
   git_url: https://github.com/conda/{{ name }}
-  git_ref: 1.6.1
+  git_ref: 1.7.0
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - python
     - pip
     - cython
-    - _libarchive_static_for_cph >=3.4.2
+    - _libarchive_static_for_cph ==3.4.2
     - msinttypes  # [win and vc<14]
   run:
     - futures   # [py27]
