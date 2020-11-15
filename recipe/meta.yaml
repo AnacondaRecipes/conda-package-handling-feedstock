@@ -18,7 +18,7 @@ source:
   #  - 0001-Do-not-consider-symlinks-as-missing.patch
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - cph = conda_package_handling.cli:main
