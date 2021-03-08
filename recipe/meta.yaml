@@ -14,8 +14,9 @@ source:
   # git_rev: 3b79c0fa8cc81ad964b90b50a50e572c4fd575d3
   # git_url: file:///opt/Shared.local/asrc/conda-package-handling
   # git_ref: {{ version }}
-  # patches:
+  patches:
   #  - 0001-Do-not-consider-symlinks-as-missing.patch
+    - 0002-punt-test_secure_refusal.patch
 
 build:
   number: 1
