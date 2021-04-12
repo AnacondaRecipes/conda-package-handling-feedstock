@@ -1,6 +1,6 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.7.2" %}
-{% set sha256 = "1d68ca635a159d0cf8aa1247375a23cfaf37de86518f1aebdbfe96be1d9598b3" %}
+{% set version = "1.7.3" %}
+{% set sha256 = "d908640a7fd6ec789afb3dc8ecdebef145f3c5dfdd4fa89dc866ea69edeea122" %}
 
 package:
   name: {{ name }}
