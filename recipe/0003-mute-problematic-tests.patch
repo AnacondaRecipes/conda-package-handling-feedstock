@@ -1,0 +1,21 @@
+diff --git a/tests/test_api.py b/tests/test_api.py
+index 7b483c4..95438e2 100644
+--- a/tests/test_api.py
++++ b/tests/test_api.py
+@@ -99,14 +99,14 @@ def test_api_extract_info_conda_v2(testing_workdir):
+     assert os.path.isfile(os.path.join(testing_workdir, 'manual_path', 'info', 'index.json'))
+     assert not os.path.isdir(os.path.join(testing_workdir, 'manual_path', 'lib'))
+ 
+-
++@pytest.mark.skip(reason="pytest is unable to run this test without stalling")
+ def test_api_transmute_tarball_to_conda_v2(testing_workdir):
+     tarfile = os.path.join(data_dir, test_package_name + '.tar.bz2')
+     errors = api.transmute(tarfile, '.conda', testing_workdir)
+     assert not errors
+     assert os.path.isfile(os.path.join(testing_workdir, test_package_name + '.conda'))
+ 
+-
++@pytest.mark.skip(reason="pytest is unable to run this test without stalling")
+ def test_api_transmute_conda_v2_to_tarball(testing_workdir):
+     condafile = os.path.join(data_dir, test_package_name + '.conda')
+     api.transmute(condafile, '.tar.bz2', testing_workdir)
