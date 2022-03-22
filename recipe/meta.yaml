@@ -29,9 +29,8 @@ requirements:
     - _libarchive_static_for_cph ==3.4.3
     - msinttypes  # [win and vc<14]
   run:
-    - futures   # [py27]
     - python
-    - six
+    # - six
     - tqdm
 
 test:
@@ -51,6 +50,7 @@ test:
 
 about:
   home: https://github.com/conda/conda-package-handling
+  dev_url: https://github.com/conda/conda-package-handling
   license: BSD-3-Clause
   license_family: BSD
   license_file:
