@@ -30,7 +30,6 @@ requirements:
     - msinttypes  # [win and vc<14]
   run:
     - python
-    # - six
     - tqdm
 
 test:
