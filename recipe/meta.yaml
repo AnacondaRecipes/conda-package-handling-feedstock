@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.8.1" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: 22d89206f55616b774a775038a6777b0d2e9b8706c23068c4d3091f114c8a4e8
+  sha256: 81e0771b8b10ab5c20678a5da714e36d97e321acfc3e5b304ec2e650ce84734b
 
 build:
   number: 0
@@ -30,7 +30,6 @@ requirements:
     - msinttypes  # [win and vc<14]
   run:
     - python
-    # - six
     - tqdm
 
 test:
@@ -46,11 +45,12 @@ test:
     - conda_package_handling.archive_utils_cy
   commands:
     # This test is skipped until Dec 2019 which is weird. Skip for now.
-    - pytest tests -k "not test_secure_refusal_to_extract_abs_paths"
+    - pytest -v --cov=tests/ --cov-report=xml --color=yes tests/ -k "not test_secure_refusal_to_extract_abs_paths"
 
 about:
   home: https://github.com/conda/conda-package-handling
   dev_url: https://github.com/conda/conda-package-handling
+  doc_url: https://github.com/conda/conda-package-handling/blob/main/README.md
   license: BSD-3-Clause
   license_family: BSD
   license_file:
@@ -68,3 +68,4 @@ extra:
     - msarahan
     - beckermr
     - dbast
+    - jezdez
