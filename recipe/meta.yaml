@@ -45,11 +45,12 @@ test:
     - conda_package_handling.archive_utils_cy
   commands:
     # This test is skipped until Dec 2019 which is weird. Skip for now.
-    - pytest tests -k "not test_secure_refusal_to_extract_abs_paths"
+    - pytest -v --cov=tests/ --cov-report=xml --color=yes tests/ -k "not test_secure_refusal_to_extract_abs_paths"
 
 about:
   home: https://github.com/conda/conda-package-handling
   dev_url: https://github.com/conda/conda-package-handling
+  doc_url: https://github.com/conda/conda-package-handling/blob/main/README.md
   license: BSD-3-Clause
   license_family: BSD
   license_file:
