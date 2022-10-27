@@ -24,6 +24,8 @@ requirements:
     - cython
     - _libarchive_static_for_cph ==3.6.1
     - msinttypes  # [win and vc<14]
+    - setuptools
+    - wheel
   run:
     - python
     - tqdm
