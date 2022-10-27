@@ -14,10 +14,6 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
-  # HACK: case-sensitive mismatch in latest conda-build
-  #missing_dso_whitelist:
-  #  - "*/VCRUNTIME140.dll"   # [win]
-  #  - "MSVCR90.dll"   # [win]
 
 requirements:
   build:
@@ -53,7 +49,7 @@ about:
   doc_url: https://github.com/conda/conda-package-handling/blob/main/README.md
   license: BSD-3-Clause
   license_family: BSD
-  license_file: https://github.com/conda/conda-package-handling/blob/main/LICENSE
+  license_url: https://github.com/conda/conda-package-handling/blob/main/LICENSE
   license_file:
     - LICENSE
     - static_deps_licenses/bzip2.txt
