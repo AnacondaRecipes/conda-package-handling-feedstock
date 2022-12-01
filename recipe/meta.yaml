@@ -14,7 +14,6 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
-  noarch: python
 
 requirements:
   build:
@@ -49,9 +48,12 @@ about:
   doc_url: https://conda.github.io/conda-package-handling/
   license: BSD-3-Clause
   license_family: BSD
+  license_url: https://github.com/conda/conda-package-handling/blob/main/LICENSE
   license_file:
     - LICENSE
   summary: Create and extract conda packages of various formats
+  description: |
+    cph is an abstraction of conda package handling and a tool for extracting, creating, and converting between formats.
 
 extra:
   recipe-maintainers:
@@ -59,4 +61,3 @@ extra:
     - dbast
     - dholth
     - jezdez
-    - msarahan
