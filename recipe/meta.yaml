@@ -48,7 +48,6 @@ about:
   doc_url: https://conda.github.io/conda-package-handling/
   license: BSD-3-Clause
   license_family: BSD
-  license_url: https://github.com/conda/conda-package-handling/blob/main/LICENSE
   license_file:
     - LICENSE
   summary: Create and extract conda packages of various formats
