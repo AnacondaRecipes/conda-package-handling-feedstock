@@ -11,20 +11,20 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - python
   host:
-    - python >=3.7
+    - python
     - pip
+    - setuptools
     - wheel
   run:
-    - python >=3.7
     - python
     - conda-package-streaming >=0.7.0
 
@@ -33,19 +33,24 @@ test:
     - tests
   requires:
     - mock
+    - pip
     - pytest
     - pytest-cov
     - pytest-mock
+    - requests  # optional, here to please pip check
   imports:
     - conda_package_handling
     - conda_package_handling.api
   commands:
+    - pip check
     - pytest -v --cov=conda_package_handling --color=yes tests/
 
 about:
   home: https://github.com/conda/conda-package-handling
   dev_url: https://github.com/conda/conda-package-handling
   doc_url: https://conda.github.io/conda-package-handling/
+  doc_source_url: https://github.com/conda/conda-package-handling/tree/{{ version }}/docs
+  license_url: https://github.com/conda/conda-package-handling/blob/{{ version }}/LICENSE
   license: BSD-3-Clause
   license_family: BSD
   license_file:
