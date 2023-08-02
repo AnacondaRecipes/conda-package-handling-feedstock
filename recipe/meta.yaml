@@ -17,6 +17,9 @@ build:
     - cph = conda_package_handling.cli:main
 
 requirements:
+  # Use this build section with python to avoid an Unexpected conda error on CI
+  build:
+    - python
   host:
     - python
     - pip
