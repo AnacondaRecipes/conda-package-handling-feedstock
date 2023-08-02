@@ -27,6 +27,7 @@ requirements:
     - wheel
   run:
     - python
+    - zstandard >=0.15
     - conda-package-streaming >=0.9.0
 
 test:
@@ -53,9 +54,11 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: Create and extract conda packages of various formats
+  summary: Create and extract conda packages of various formats.
   description: |
-    cph is an abstraction of conda package handling and a tool for extracting, creating, and converting between formats.
+    `conda` and `conda-build` use `conda_package_handling.api` to create and extract
+    conda packages. This package also provides the `cph` command line tool to
+    extract, create, and convert between formats.
 
 extra:
   recipe-maintainers:
