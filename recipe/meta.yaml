@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: dcaa757fca94857420acd21b27d1ff6939e34522d196c3bafdd6dfed90559da5
+  sha256: dae0c697cf8757d997d0d7f4fbe48a5516cb17f16b3715dadb6008ade8ef850e
 
 build:
   number: 0
@@ -17,8 +17,6 @@ build:
     - cph = conda_package_handling.cli:main
 
 requirements:
-  build:
-    - python
   host:
     - python
     - pip
@@ -26,7 +24,7 @@ requirements:
     - wheel
   run:
     - python
-    - conda-package-streaming >=0.7.0
+    - conda-package-streaming >=0.9.0
 
 test:
   source_files:
@@ -51,8 +49,7 @@ about:
   doc_url: https://conda.github.io/conda-package-handling/
   license: BSD-3-Clause
   license_family: BSD
-  license_file:
-    - LICENSE
+  license_file: LICENSE
   summary: Create and extract conda packages of various formats
   description: |
     cph is an abstraction of conda package handling and a tool for extracting, creating, and converting between formats.
