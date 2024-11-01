@@ -1,3 +1,3 @@
 channels:
-  - https://staging.continuum.io/prefect/fs/$bottle-feedstock/pr3/da91e67
-  - https://staging.continuum.io/prefect/fs/$conda-package-streaming-feedstock/pr5/7b09fdb
+  - https://staging.continuum.io/prefect/fs/bottle-feedstock/pr3/da91e67
+  - https://staging.continuum.io/prefect/fs/conda-package-streaming-feedstock/pr5/7b09fdb
