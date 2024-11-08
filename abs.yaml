@@ -1,5 +1,6 @@
 channels:
   - https://staging.continuum.io/prefect/fs/bottle-feedstock/pr3/dcca874
   - https://staging.continuum.io/prefect/fs/conda-package-streaming-feedstock/pr5/db8f929
+  - https://staging.continuum.io/prefect/fs/zstandard-feedstock/pr7/bc8d529
 build_env_vars:
   ANACONDA_ROCKET_ENABLE_PY313 : yes
