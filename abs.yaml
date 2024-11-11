@@ -1,4 +1,2 @@
-channels:
-  - https://staging.continuum.io/prefect/fs/conda-package-streaming-feedstock/pr5/9ee4b74
 build_env_vars:
   ANACONDA_ROCKET_ENABLE_PY313 : yes
