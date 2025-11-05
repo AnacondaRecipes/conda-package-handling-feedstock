@@ -10,8 +10,8 @@ source:
   sha256: a68d23d795704f1b687559b89c98e73d0dbebcab077592c60bffc1dc408b72e9
 
 build:
-  number: 0
-  skip: True  # [py<38]
+  number: 1
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   entry_points:
     - cph = conda_package_handling.cli:main
@@ -59,6 +59,7 @@ about:
     `conda` and `conda-build` use `conda_package_handling.api` to create and extract
     conda packages. This package also provides the `cph` command line tool to
     extract, create, and convert between formats.
+
 
 extra:
   recipe-maintainers:
