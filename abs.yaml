@@ -1,6 +1,2 @@
 build_env_vars:
   ANACONDA_ROCKET_ENABLE_PY314 : yes
-
-channels:
-  - https://staging.continuum.io/pbp/fs/requests-feedstock/pr18/d7991e1
-  - https://staging.continuum.io/pbp/fs/conda-package-streaming-feedstock/pr7/2a92d02
